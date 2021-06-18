@@ -1,0 +1,113 @@
+﻿@model examenEmpleados.Models.Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalle de Información de Empleados</h2>
+
+    <h4>Empleado</h4>
+    <hr />
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeId)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeId)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeApellido)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeApellido)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeNombres)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeNombres)
+                    </dd>
+                </dl>
+
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeApodo)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeApodo)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeDireccion)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeDireccion)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeCodigoPostal)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeCodigoPostal)
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="col-6">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeTelefono)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeTelefono)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeCelular)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeCelular)
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeFax)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeFax)
+                    </dd>
+                </dl>
+            </div>
+            <div></div>
+            <div class="col-12">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EmployeeObservaciones)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EmployeeObservaciones)
+                    </dd>
+                </dl>
+            </div>
+
+            <div>
+                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.EmployeeId">Editar</a>
+                <a asp-action="Index" class="btn btn-success" asp-route-id="@Model.EmployeeId">Regresar</a>
+            </div>
+            
+        </div>
+    </div>
+
+                
+
+      

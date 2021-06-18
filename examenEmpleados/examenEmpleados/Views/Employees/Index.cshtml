@@ -1,0 +1,46 @@
+﻿@model IEnumerable<examenEmpleados.Models.Employee>
+
+@{
+    ViewData["Title"] = "Empleados";
+}
+
+<h2>Empleados Registrados</h2>
+
+<div class="row">
+    <div class="col-auto">
+        <input type="text" id="txt-search" placeholder="Buscar..." class="form-control-plaintext" />
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-success" onclick="employee_search()" id="search-link">Buscar</a>
+        <a asp-action="Create" class="btn btn-success"><i class="fas fa-plus-square"></i>Agregar</a>
+    </div>
+</div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeNombres)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.EmployeeNombres)</td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.EmployeeId">Editar</a>
+                        <a asp-action="Details" class="btn btn-success" asp-route-id="@item.EmployeeId">Detalles</a>
+                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.EmployeeId">Borrar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<script src="~/js/employees.js" asp-append-version="true"></script>
